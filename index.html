@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Formulario de Preguntas</title>
+  </head>
+  <body>
+    <div class="form-container">
+      <h2>Formulario de Registro</h2>
+      <img
+        src="img/undraw_login_re_4vu2.svg"
+        alt="Descripción de la imagen"
+        class="header-image"
+      />
+      <!-- Primera sección del formulario -->
+      <form id="formSection1" class="form-section">
+        <label for="nombre">Nombre:</label>
+
+        <input
+          type="text"
+          id="nombre"
+          name="nombre"
+          placeholder="Ingresa tu nombre"
+          required
+        />
+
+        <label for="edad">Edad:</label>
+        <input
+          type="number"
+          id="edad"
+          name="edad"
+          min="0"
+          placeholder="Ingresa tu edad"
+          required
+        />
+
+        <label for="genero">Género:</label>
+        <select id="genero" name="genero" required>
+          <option value="">Selecciona tu género</option>
+          <option value="masculino">Masculino</option>
+          <option value="femenino">Femenino</option>
+          <option value="otro">Otro</option>
+        </select>
+
+        <button type="button" onclick="goToQuestions()">Siguiente</button>
+      </form>
+
+      <!-- Segunda sección del formulario -->
+
+      <form id="formSection2" class="form-section">
+        <h3>Responde las siguientes 15 preguntas sobre el juego Snake:</h3>
+
+        <label for="pregunta1"
+          >1. ¿Con qué frecuencia juegas al juego Snake?</label
+        >
+        <select id="pregunta1" name="pregunta1" required>
+          <option value="">Selecciona una opción</option>
+          <option value="Todos los días">Todos los días</option>
+          <option value="Varias veces a la semana">
+            Varias veces a la semana
+          </option>
+          <option value="Rara vez">Rara vez</option>
+          <option value="Nunca">Nunca</option>
+        </select>
+
+        <label for="pregunta2">2. ¿En qué dispositivo juegas al Snake?</label>
+        <select id="pregunta2" name="pregunta2" required>
+          <option value="">Selecciona una opción</option>
+          <option value="Teléfono móvil">Teléfono móvil</option>
+          <option value="Computadora">Computadora</option>
+          <option value="Consola">Consola</option>
+          <option value="Otro">Otro</option>
+        </select>
+
+        <label for="pregunta3">3. ¿Qué versión de Snake prefieres?</label>
+        <select id="pregunta3" name="pregunta3" required>
+          <option value="">Selecciona una opción</option>
+          <option value="Clásica (Nokia)">Clásica (Nokia)</option>
+          <option value="Modernizada">Modernizada</option>
+          <option value="Adaptaciones">Adaptaciones</option>
+          <option value="No tengo preferencia">No tengo preferencia</option>
+        </select>
+
+        <label for="pregunta4"
+          >4. ¿Cuánto tiempo sueles jugar en una sola sesión de Snake?</label
+        >
+        <select id="pregunta4" name="pregunta4" required>
+          <option value="">Selecciona una opción</option>
+          <option value="Menos de 10 minutos">Menos de 10 minutos</option>
+          <option value="Entre 10 y 30 minutos">Entre 10 y 30 minutos</option>
+          <option value="Más de 30 minutos">Más de 30 minutos</option>
+          <option value="No juego">No juego</option>
+        </select>
+
+        <label for="pregunta5"
+          >5. ¿Qué te parece el nivel de dificultad del juego?</label
+        >
+        <select id="pregunta5" name="pregunta5" required>
+          <option value="">Selecciona una opción</option>
+          <option value="Muy fácil">Muy fácil</option>
+          <option value="Adecuado">Adecuado</option>
+          <option value="Difícil">Difícil</option>
+          <option value="Muy difícil">Muy difícil</option>
+        </select>
+
+        <label for="pregunta6"
+          >6. ¿Te gustaría que aumente la velocidad del videojuego?</label
+        >
+        <select id="pregunta6" name="pregunta6" required>
+          <option value="">Selecciona una opción</option>
+          <option value="Sí">Sí</option>
+          <option value="No">No</option>
+          <option value="Tal vez">Tal vez</option>
+        </select>
+
+        <label for="pregunta7"
+          >7. ¿Te gustan las mejoras gráficas del juego?</label
+        >
+        <select id="pregunta7" name="pregunta7" required>
+          <option value="">Selecciona una opción</option>
+          <option value="Sí, me encantan">Sí, me encantan</option>
+          <option value="No, prefiero lo clásico">
+            No, prefiero lo clásico
+          </option>
+          <option value="No tengo preferencia">No tengo preferencia</option>
+        </select>
+
+        <label for="pregunta8">8. ¿Consideras que el juego es adictivo?</label>
+        <select id="pregunta8" name="pregunta8" required>
+          <option value="">Selecciona una opción</option>
+          <option value="Sí, bastante">Sí, bastante</option>
+          <option value="Un poco">Un poco</option>
+          <option value="No, para nada">No, para nada</option>
+        </select>
+
+        <label for="pregunta9"
+          >9. ¿Te gusta competir por puntuaciones altas en Snake?</label
+        >
+        <select id="pregunta9" name="pregunta9" required>
+          <option value="">Selecciona una opción</option>
+          <option value="Sí, siempre intento mejorar">
+            Sí, siempre intento mejorar
+          </option>
+          <option value="Solo a veces">Solo a veces</option>
+          <option value="No, no me interesa">No, no me interesa</option>
+        </select>
+
+        <label for="pregunta10"
+          >10. ¿Cuál es tu puntaje más alto en Snake?</label
+        >
+        <input
+          type="number"
+          id="pregunta10"
+          name="pregunta10"
+          min="0"
+          placeholder="Ingresa tu puntaje más alto"
+          required
+        />
+
+        <label for="pregunta11"
+          >11. ¿Prefieres jugar Snake con amigos o solo?</label
+        >
+        <select id="pregunta11" name="pregunta11" required>
+          <option value="">Selecciona una opción</option>
+          <option value="Con amigos">Con amigos</option>
+          <option value="Solo">Solo</option>
+          <option value="No tengo preferencia">No tengo preferencia</option>
+        </select>
+
+        <label for="pregunta12"
+          >12. ¿Te gustaría que Snake tuviera más niveles o solo la versión
+          clásica?</label
+        >
+        <select id="pregunta12" name="pregunta12" required>
+          <option value="">Selecciona una opción</option>
+          <option value="Me gustaría más niveles">
+            Me gustaría más niveles
+          </option>
+          <option value="Prefiero la versión clásica">
+            Prefiero la versión clásica
+          </option>
+          <option value="Me da igual">Me da igual</option>
+        </select>
+
+        <label for="pregunta13"
+          >13. ¿Cuánto tiempo llevas jugando al Snake?</label
+        >
+        <select id="pregunta13" name="pregunta13" required>
+          <option value="">Selecciona una opción</option>
+          <option value="Menos de 1 año">Menos de 1 año</option>
+          <option value="1 a 3 años">1 a 3 años</option>
+          <option value="Más de 3 años">Más de 3 años</option>
+        </select>
+
+        <label for="pregunta14"
+          >14. ¿Qué aspecto te gustaría cambiar del juego?</label
+        >
+        <textarea
+          id="pregunta14"
+          name="pregunta14"
+          placeholder="Escribe tu sugerencia aquí"
+        ></textarea>
+
+        <label for="pregunta15"
+          >15. ¿Te gustaría ver una versión multijugador de Snake?</label
+        >
+        <select id="pregunta15" name="pregunta15" required>
+          <option value="">Selecciona una opción</option>
+          <option value="Sí, me encantaría">Sí, me encantaría</option>
+          <option value="No, prefiero jugar solo">
+            No, prefiero jugar solo
+          </option>
+          <option value="No me interesa">No me interesa</option>
+        </select>
+
+        <!-- Botón para enviar el formulario -->
+        <button id="continueButton" type="button">Enviar</button>
+
+      </form>
+    </div>
+
+    <!-- Enlace al archivo JavaScript -->
+    <script src="script.js"></script>
+  </body>
+</html>

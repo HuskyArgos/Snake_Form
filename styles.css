@@ -1,0 +1,102 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e9ecef; /* Fondo gris claro */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.form-container {
+    background-color: white;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Sombra más pronunciada */
+    padding: 40px;
+    border-radius: 10px;
+    max-width: 800px;
+    width: 100%;
+    overflow-y: auto;
+    max-height: 90vh;
+}
+
+h2 {
+    font-size: 28px; /* Aumentado para mayor impacto */
+    font-weight: 600; /* Negrita */
+    color: #343a40; /* Color gris oscuro */
+    margin-bottom: 30px; /* Espacio más amplio */
+    text-align: center; /* Centrado */
+}
+
+label {
+    font-size: 16px;
+    color: #495057; /* Color gris más suave */
+    display: block;
+    margin-bottom: 8px;
+}
+
+input[type="text"], input[type="number"], select, textarea {
+    width: 100%;
+    padding: 12px; /* Mayor espacio en el campo */
+    border: 1px solid #ced4da; /* Borde gris claro */
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: #f8f9fa; /* Fondo de entrada más claro */
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    transition: border-color 0.3s; /* Transición suave al enfocar */
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: #007bff; /* Borde azul al enfocar */
+    background-color: #ffffff; /* Cambiar a blanco al enfocar */
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px; /* Mayor altura mínima */
+}
+
+button {
+    background-color: #007bff; /* Color azul */
+    color: white;
+    border: none;
+    padding: 14px 24px; /* Mayor padding para un botón más grande */
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s; /* Transición suave para el hover */
+    width: 100%; /* Botón ocupa todo el ancho */
+}
+
+button:hover {
+    background-color: #0056b3; /* Color más oscuro al pasar el ratón */
+}
+
+/* Ocultar la segunda parte por defecto */
+.form-section {
+    display: none;
+}
+
+#formSection1 {
+    display: block; /* Solo la primera sección se muestra al inicio */
+}
+
+#formSection2 {
+    display: none; /* Segunda sección oculta inicialmente */
+}
+
+.header {
+    text-align: center; /* Centra el texto y la imagen */
+    margin-bottom: 20px; /* Espacio debajo del encabezado */
+}
+
+.header-image {
+    max-width: 150px; /* Ajusta el ancho máximo según lo necesites */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+    display: block; /* Asegura que la imagen sea tratada como un bloque para centrarla */
+}
